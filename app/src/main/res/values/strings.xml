@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">QrScanner</string>
+
+    <string name="title_activity_demo">QR Scanner Library Demo</string>
+    <string name="title_activity_scan_xpub">Scan XPub</string>
+
+    <string name="launch_scanner">Launch scanner</string>
+    <string name="launch_xpub_scanner">Launch xpub scanner</string>
 </resources>
