@@ -16,7 +16,7 @@ allprojects {
 Add dependency:
 
 ```
-implementation 'com.github.NovaCrypto:QrScanner:2018-05-28@aar'
+implementation 'com.github.NovaCrypto:QrScanner:2018-05-28'
 ```
 
 For usage, see the demo app.
