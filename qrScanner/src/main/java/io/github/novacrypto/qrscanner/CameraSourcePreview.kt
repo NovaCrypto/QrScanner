@@ -101,6 +101,7 @@ class CameraSourcePreview @JvmOverloads constructor(
                 it.start(surfaceView.holder)
                 startRequested = false
                 barcodeView?.previewSize = it.previewSize
+                requestLayout()
             }
         }
     }
