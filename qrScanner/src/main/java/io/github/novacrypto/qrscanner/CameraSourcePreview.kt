@@ -77,10 +77,8 @@ class CameraSourcePreview @JvmOverloads constructor(
             stop()
 
             this.cameraSource = cameraSource
-                    ?.also {
-                        startRequested = true
-                        startIfReady()
-                    }
+            startRequested = true
+            startIfReady()
         }
     }
 
