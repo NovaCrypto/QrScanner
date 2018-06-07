@@ -34,6 +34,7 @@ open class ScanQrActivity : AppCompatActivity() {
     companion object {
         const val OPTION_SHOW_BARCODE_BOX = "SHOW_BARCODE_BOX"
         const val BARCODE_DATA = "BARCODE_DATA"
+        const val AUTOACCEPT_RESULT = "OPTION_AUTOACCEPT_RESULT"
         internal const val CAMERA_PERMISSION_RESPONSE = 23
     }
 
@@ -75,8 +76,10 @@ open class ScanQrActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
-    private fun Intent?.toOptions() =
-            Options(this?.extras?.getBoolean(OPTION_SHOW_BARCODE_BOX) ?: false)
+    private fun Intent?.toOptions() = Options(
+            this?.extras?.getBoolean(OPTION_SHOW_BARCODE_BOX) ?: false,
+            this?.extras?.getBoolean(AUTOACCEPT_RESULT) ?: false
+    )
 
     override fun onRequestPermissionsResult(
             requestCode: Int,

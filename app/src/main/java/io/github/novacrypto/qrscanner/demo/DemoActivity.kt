@@ -44,11 +44,20 @@ class DemoActivity : AppCompatActivity() {
         launch.setOnClickListener {
             startActivityForResult(Intent(this, ScanQrActivity::class.java).apply {
                 putExtra(ScanQrActivity.OPTION_SHOW_BARCODE_BOX, BuildConfig.DEBUG)
+                putExtra(ScanQrActivity.AUTOACCEPT_RESULT, false)
+            }, REQUEST_SCAN)
+        }
+
+        // Auto-accept scanner
+        launch_autoaccept.setOnClickListener {
+            startActivityForResult(Intent(this, ScanQrActivity::class.java).apply {
+                putExtra(ScanQrActivity.OPTION_SHOW_BARCODE_BOX, BuildConfig.DEBUG)
+                putExtra(ScanQrActivity.AUTOACCEPT_RESULT, true)
             }, REQUEST_SCAN)
         }
 
         // Custom scanner
-        launch_xpub.setOnClickListener {
+        launch_xpub.setOnClickListener  {
             startActivityForResult(Intent(this, XPubScannerActivity::class.java).apply {
                 putExtra(ScanQrActivity.OPTION_SHOW_BARCODE_BOX, BuildConfig.DEBUG)
             }, REQUEST_SCAN)

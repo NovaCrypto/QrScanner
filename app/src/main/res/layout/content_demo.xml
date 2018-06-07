@@ -35,11 +35,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/launch_scanner"
-        app:layout_constraintBottom_toTopOf="@+id/launch_xpub"
+        app:layout_constraintBottom_toTopOf="@+id/launch_autoaccept"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/launch_autoaccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/launch_scanner_auto_accept"
+        app:layout_constraintBottom_toTopOf="@+id/launch_xpub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/launch"/>
 
     <Button
         android:id="@+id/launch_xpub"

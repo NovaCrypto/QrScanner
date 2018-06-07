@@ -68,12 +68,17 @@ internal class QrCamera(
             if (value == field) return
             field = value
             value?.let {
-                Snackbar.make(cameraSurfaceView, it, Snackbar.LENGTH_INDEFINITE)
-                        .setAction(android.R.string.ok, { _ ->
-                            Timber.d("Accepted barcode")
-                            onAccept(it)
-                        })
-                        .show()
+                if (options.autoAcceptResult) {
+                    Timber.d("Accepted barcode automatically")
+                    onAccept(it)
+                } else {
+                    Snackbar.make(cameraSurfaceView, it, Snackbar.LENGTH_INDEFINITE)
+                            .setAction(android.R.string.ok, { _ ->
+                                Timber.d("Accepted barcode")
+                                onAccept(it)
+                            })
+                            .show()
+                }
             }
         }
 

@@ -21,4 +21,7 @@
 
 package io.github.novacrypto.qrscanner
 
-internal class Options(val showBarcodeBounds: Boolean)
+internal class Options(
+        val showBarcodeBounds: Boolean,
+        val autoAcceptResult: Boolean
+)

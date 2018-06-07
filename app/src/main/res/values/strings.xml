@@ -5,5 +5,6 @@
     <string name="title_activity_scan_xpub">Scan XPub</string>
 
     <string name="launch_scanner">Launch scanner</string>
+    <string name="launch_scanner_auto_accept">Launch scanner auto-accept</string>
     <string name="launch_xpub_scanner">Launch xpub scanner</string>
 </resources>
